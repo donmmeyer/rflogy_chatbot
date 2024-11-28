@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask about RFLOGY</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #add8e6; /* Light blue background */
+            margin: 0;
+            padding: 20px; /* Small padding for better spacing */
+        }
+        img {
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        textarea {
+            margin-top: 10px;
+            padding: 10px;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #8c7b6b; /* Button color to match the theme */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #705d4b; /* Darker shade on hover */
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .response {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ask a Question about the RF Components sold by RFLogy</h2>
+    <h4>Example: What is an attenuator?</h4>
+    <img src="{{ url_for('static', filename='rflogy_pict.png') }}" alt="RFLogy Logo">
+
+    <form method="POST">
+        <textarea name="question" rows="4" cols="50" placeholder="Type your question here..."></textarea><br>
+        <button type="submit">Ask</button>
+    </form>
+
+    {% if response %}
+    <div class="response">
+        <h3>Response:</h3>
+        <p>{{ response }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
