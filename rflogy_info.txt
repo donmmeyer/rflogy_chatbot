@@ -1,4 +1,4 @@
-Answer the given question using the provided context, and if the answer is not contained within the context, say "I don't know.  This is outside the context of this chatbox." Explain your answer if possible. Do not use markdown formatting in your output,
+Answer the given question using the provided context, and if the answer is not contained within the context, say "I don't know.  This is outside the context of this chat." Explain your answer if possible. Do not use markdown formatting in your output,
 and do not mention the context provided to you.
 
 Include in the context any explanations or descriptions of RF components.
